@@ -1,25 +1,20 @@
 /* style.css */
-.prvni {
-    color: black;
+.stejne {
     background-color: pink;
     font-family: Verdana, "DejaVu Sans", sans-serif;
   }
-  #druhy {
+ 
+  .adjust{
+    font-size: 24px;
+  }
+
+ #druhy {
     color: blue;
     font-size: 36px;
   }
-  .treti {
-    background-color: pink;
-    font-size: 24px;
-    font-family: Verdana, "DejaVu Sans", sans-serif;
-  }
+
   #ctvrty {
     background-color: lightgreen;
-    font-size: 24px;
     font-weight: bold;
   }
-  .paty {
-    color: black;
-    background-color: pink;
-    font-family: Verdana, "DejaVu Sans", sans-serif;
-  }
+  

@@ -9,8 +9,8 @@ body {
 .para {
   font-size: 22px;}
 .small-para {font-size: 14px;}
-  /* takto to stačí, nevím proč v řešení 
-  je ve .small-para ještě jednou font-weight:800? */
+  /* takto to stačí, od řešení se liším v tom, že
+ ve .small-para již nemám další font-weight:800 */
  
   .button {
     background-color: rgb(255, 255, 255);
@@ -26,6 +26,5 @@ body {
     font-weight: 100;
     font-size: 22px;}
     div .child {
-      color: rgb(0, 0, 0);
       font-weight: 800;
       font-size: 14px; }

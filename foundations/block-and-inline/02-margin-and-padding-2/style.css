@@ -5,23 +5,50 @@ body {
 
 .card {
   width: 400px;
-  background: #fff;
+  background: hsl(0, 0%, 100%);
+  padding: 8px;
   margin: 16px auto;
 }
 
 .title {
   background: #e3f4ff;
+  text-transform: uppercase;/* dal jsem velkými, 
+  protože se mi to líbilo*/
+  margin: 1px auto 8px auto;/* boxy mezi sebou, auto= modrá do stran*/
+  padding: 16px 8px;/* modrá výplň tloušťka apod.*/
+  font-size: 26px;/* větší písmo mi přišlo lepší*/
+  text-align: center;/* chtěl jsem to mít na středu*/
 }
+
+/* content a další níže od sebe nejsou oddělney pomocí margin*/
 
 .content {
   background: #e3f4ff;
+  padding: 16px 8px;
 }
 
 .button-container {
   background: #e3f4ff;
+  text-align: center;
+  padding: 50px 2px;
 }
+/* text-align to vycenturje na střed - celou třídu
+button-container, pedding je vzdálenost do všech stran, mezi horním textem a "and a...." 
+tady byly okraje OK- nepotřebuji ani 2px, proto jsem dal jen 2px, ale bez toho by to nefugovalo, ale nelíbila se mi vzdálenost
+od horního "content", takže jsem přidal vzdálenost na 50px*/
 
 button {
   background: white;
-  border: 1px solid #eee;
+  border: 1px solid red;
+  display: block;
+  margin: 5px auto;
+  padding: 8px 24px;
 }
+/* samotné "button" bude mít 
+tedy bílé pozadí, hranice jsem udělal červené
+pro lepší rozpoznání - že tam skutečně hranice
+nějaká je..., zarovnání do bloku:display: block;
+margin je vnější vzdálenost = mezi hranicí červené čáry a nápisem "and a", tady je 0 nahoře a dole
+a po stranách je auto, já nastavuji na 5px, protože mi to přišlo 
+moc blízko sebe, padding je vrámci boxu a 8px je tedy vzdálenost 
+nahoře a dole mezi BIG BUTTON a hranicí boxu = červenou čárou a 24px je vzdálenost po stranách... */

@@ -2,28 +2,85 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 16px; /* vše je nastavené, stačí jen odsadit na straně, 
+  height má větší váhu než padding pokud je v rozporu*/
+  font-size: 32px;
+  font-weight: 900;
 }
+
+.body {
+  flex: 1;
+  display: flex;
+}
+
+.sidebar {
+  flex-shrink: 0;/* flexbox se automaticky smršťuje když je málo místa, tím mu říkáme
+  nesmršťuj mě!*/
+  padding: 16px;/* zezhora a ze spoda a ze stran, jedna hodnota pro všechno, */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;/* Ve výchozím stavu má <ul> vlastní odsazení a mezery.
+  Když to nastavím na 0, zbavím se těchto výchozích hodnot → mám plnou kontrolu.*/
+  padding: 0;/* to stejné */
+}
+
+li {
+  margin-bottom: 16px; /*posunutí mezi sebou od spoda*/
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.container { 
+  padding: 48px;/*okraje v kontejneru*/
+  display: flex; /*z bloku do řádku*/
+  flex-wrap: wrap; /*zpět z řádku do bloku ale s mezerami!!! pozor!! flax wrap normálně → Položky 
+  se zalomí na další řádek, když už není místo
+  → Výsledek: víc řádků s položkami vedle sebe*/
+  gap: 32px;/*mezery mezi boxy samotnými*/
+}
+
+
+
+
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  align-items: center;/*doprostřed vertikálně*/
+  justify-content: center;/*doprostřed horizontálně*/
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
-  box-sizing: border-box;
+  box-sizing: border-box;/*Tohle říká prohlížeči: „počítej padding a border do celkové šířky a výšky.“
+  Jinak by se šířka navýšila o padding a border, což by mohlo rozhodit layout.
+  S tímto nastavením je .sidebar vždy přesně 300px široká, včetně paddingu.*/
 }
 
-.card {
+.card {/*je vlastně také objekt, který upravujeme, nejde jen o samotný text, 
+  který je v dané třídě napsán - ten který se objeví při spuštění kódu, jde o objekt 
+  se kterým je možné také manipulovat*/
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  padding: 16px;/*místo okolo textu uvnitř boxu*/
+  width: 300px;/*změní šířku a tím pádem se budou boxy řadit i vedle sebe (protože se vejdou)*/
 }

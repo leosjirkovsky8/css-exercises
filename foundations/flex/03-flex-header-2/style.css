@@ -6,15 +6,24 @@ body {
   margin: 0;
   background: #eee;
   font-family: Besley, serif;
+/* body jakožto nejobsáhlejší část nám definuje pozadí, písmo... a margin:0 říká, 
+že box má být až do krajů, zajímavé je, že výchozí pozice až do krajů není... */
 }
 
 .header {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  /* tady nám header definuje vše, co je vlastně v třídě header, 
+  bez display:flex by to bylo pod sebou, bez space between by to bylo nasázené vedle sebe (boxy), 
+  s padding 8px je místo uvnitř boxů s nápisem mezi jeho okraji, čím větší, tím větší budou 
+  okraje - až do té doby, než by to narušovalo samotné písmo apod.*/
 }
 
-.profile-image {
+.profile-image {/* fialové kolečko */
   background: rebeccapurple;
   box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
   border-radius: 50%;
@@ -22,16 +31,17 @@ body {
   height: 48px;
 }
 
-.logo {
+.logo {/* nemusí mít dispaly:flex, prootže je definováno v left and right...jako flex... */
   color: rebeccapurple;
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+  margin:10px;
 }
 
-button {
-  border: none;
-  border-radius: 8px;
+button {/* v tomto je ta notifikace */
+  border:white;
+  border-radius: 8px; /* zaoblení rádiusu - namísto hran*/
   background: rebeccapurple;
   color: white;
   padding: 8px 24px;
@@ -45,4 +55,15 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;/* opět sází itemy-boxy vedel sebe namísto pod sebou*/
+  margin: 0;/* není potřeba asi?*/
+  padding: 0;/* není potřeba asi?*/
+  gap: 16px;/* mezera mezi boxy - itemy */
+}
+
+.left, .right {
+  display: flex;/* logo, linky(souhrně linky-již jsou definované do řady), notifikaci a kolečko srovnává do řady, jinak by logo a linky byly 
+   pod sebou, a notifikace s kolečkem taky*/
+  align-items: center;
+  gap: 16px;/* minimální mezera mezi nimi */
 }

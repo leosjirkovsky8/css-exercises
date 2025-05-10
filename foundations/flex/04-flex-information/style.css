@@ -1,5 +1,7 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;/* text přesune do prostředka boxu, je oddělené od conteineru*/
+  
 }
 
 img {
@@ -10,6 +12,17 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin-bottom: 32px;/* zvětšuje mezeru mezi nadpisem a zbytkem*/
+}
+
+.container {/* zodpovědný za obrázky+popisky přesun ze strany do prostředka */
+  display: flex; /* do řádku, ne pod sebou*/
+  justify-content: center;/* roztaženo přes celou stránku*/
+  gap: 52px;
+}
+
+.info {
+  max-width: 200px;
 }
 
 /* do not edit this footer */

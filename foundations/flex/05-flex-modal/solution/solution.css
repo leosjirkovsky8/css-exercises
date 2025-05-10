@@ -9,7 +9,7 @@ body {
   margin: 0;
   background: #aaa;
   color: #333;
-  /* I'll give you this one for free */
+  /* tohle podtím zařadí ikonu (doprostřed stránky)*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +20,7 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+
 }
 
 .icon {
@@ -74,13 +75,15 @@ button.cancel {
   display: flex;
   gap: 16px;
   padding: 16px;
+  /* tím, že je zařazen konteiner, tak modal je nyní rodič 
+  kontejneru a zařadí ikonu a konteiner vedle sebe*/
 }
 
 .icon {
   /* this keeps the icon from getting smashed by the text */
   flex-shrink: 0;
 }
-/* header container should be wrapped around the button element as well in order for flex style to work */
+/* header je teď rodič zavíracího buttonu, takže díky display flex budou nyí vedle sebe*/
 .header {
   display: flex;
   align-items: center;
@@ -93,3 +96,5 @@ button.cancel {
 .text {
   margin-bottom: 16px;
 }
+/* kontejner řadí nromálně pod sebe a buttony vedle sebe, mezery je 
+možné dělat několika způsoby mezi sebou  */
